@@ -1,0 +1,58 @@
+<!-- <p>Enter Pnr Number</p>
+<div>
+    <label class="form-label">PNR</label>
+    <input [(ngModel)]="SearchModel.pnr"  class="form-control" type="text" />
+</div>
+<div class="py-4">
+    <input type="submit"  class="btn btn-primary" value="Add Airline" (click)="AddSearch()" />
+</div>
+<caption>List of  Details </caption>
+  <table class="table caption-top">
+  <thead class="table-light">
+      <td>PNR</td>
+  </thead>
+  <tr *ngFor="let cust of SearchModels">
+      <td>{{cust.pnr}}</td>
+  </tr> -->
+  <div
+  class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+  style="background-image: url('././assets/Banner.jpg');"
+>
+  <div class="container">
+      <div class="row">
+          <div>
+            <label class="form-label">PNR</label>
+              <input type="text"  [(ngModel)]="SearchModel.pnr"/> 
+          </div>
+          <div class="py-4">
+            <input type="button"  class="btn btn-primary" value="search" (click)="GetSearchData()" />
+        </div>
+      </div>
+  </div>
+ <h3 >List of PNR Number Details </h3><br>
+  <table class="table caption-top">
+  <thead class="table-light">
+      <td>Airline Id</td>
+      <td>Airline Name</td>
+      <td>Username</td>
+      <td>Gender</td>
+      <td>Seatnum</td>
+      <td>Address</td>
+      <td>Contact</td>
+      <td>Email</td>
+      <td>PNR</td>
+    
+  </thead>
+  <tr *ngFor="let cust of SearchModels">
+     <td>{{cust.airlineId}}</td>
+        <td>{{cust.airlinename}}</td>
+        <td>{{cust.username}}</td>
+        <td>{{cust.gender}}</td>
+        <td>{{cust.seatnum}}</td>
+        <td>{{cust.address}}</td>
+        <td>{{cust.contact}}</td>
+        <td>{{cust.email}}</td>
+        <td>{{cust.pnr}}</td>
+</tr>
+</table>
+  </div>

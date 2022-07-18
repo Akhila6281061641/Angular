@@ -1,0 +1,55 @@
+
+<div class="row" >
+  <div class="col-xl-9">
+      <div class="card border-0">
+          <div class="card-body">
+            <div class="bg-success p-2 text-white bg-opacity-75">
+              <h2>Add Airline</h2>
+            
+                  <div>
+                    <label class="form-label">Airline Name</label>
+                      <input [(ngModel)]="AirlineModel.airlineName"  class="form-control" type="text"/>
+                  </div>
+                  <div>
+                      <label class="form-label">Airline LOGO</label>
+                      <input [(ngModel)]="AirlineModel.airlineLogo"  class="form-control" type="text" />
+              
+                  </div>
+                  <div>
+                      <label class="form-label">Address</label>
+                      <input [(ngModel)]="AirlineModel.address"  class="form-control" type="text" />
+                  </div>
+                  <div>
+                    <label class="form-label">Contact</label>
+                    <input [(ngModel)]="AirlineModel.contact"  class="form-control" type="text" />
+                </div>
+                  <div class="py-4">
+                      <input type="submit"  class="btn btn-primary" value="Add Airline" (click)="AddAirline()" />
+                  </div>
+                </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+  <h3>List of Airlines</h3> 
+  <table  class="table table-bordered border-primary">
+  <thead class="table-light">
+      <td>Airline Name</td>
+      <td>Airline LOGO</td>
+      <td>Address</td>
+      <td>Contact</td>
+      <td>Actions</td>
+  </thead>
+  <tr *ngFor="let cust of AirlineModels">
+      <td>{{cust.airlineName}}</td>
+      <td>{{cust.airlineLogo}}</td>
+      <td>{{cust.address}}</td>
+      <td>{{cust.contact}}</td>
+      <td>
+          <button type="button" (click)="EditAirline(cust)" class="btn btn-outline-primary"
+              style="margin:10px">Edit</button>
+          <button type="button" (click)="DeleteAirline(cust)" class="btn btn-outline-primary">Delete</button>
+      </td>
+  </tr>
+</table>

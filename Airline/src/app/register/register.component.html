@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-xl-9">
+        <div class="card border-0">
+            <div class="card-body">
+                <div class="p-3 mb-2 bg-dark text-white">
+                <h2>Register</h2>
+                <div>
+                    <label class="form-label">User Name</label>
+                    <input [(ngModel)]="registerModel.userName" class="form-control" type="text" />
+                </div><br><br/>
+                <div>
+                    <label class="form-label">Password</label>
+                    <input [(ngModel)]="registerModel.password" class="form-control" type="text" />
+                </div><br><br/>
+                <div class="py-4">
+                    <input type="submit" class="btn btn-primary" value="Register" (click)="Register()"/>
+                </div><br><br/>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+

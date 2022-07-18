@@ -1,0 +1,85 @@
+
+<div class="row" >
+    <div class="col-xl-9">
+        <div class="card border-0">
+            <div class="card-body">
+                <div class="bg-success p-2" style="--bs-bg-opacity: .5;">
+                <h2>Add Booking</h2>
+              
+                    <div>
+                      <label class="form-label">Airline Id</label>
+                        <input [(ngModel)]="BookingModel.airlineId"  class="form-control" type="text"/>
+                    </div>
+                    <div>
+                        <label class="form-label">Airline Name</label>
+                        <input [(ngModel)]="BookingModel.airlinename"  class="form-control" type="text" />
+                
+                    </div>
+                    <div>
+                        <label class="form-label">UserName</label>
+                        <input [(ngModel)]="BookingModel.username"  class="form-control" type="text" />
+                
+                    </div>
+                    <div>
+                        <label class="form-label">Gender</label>
+                        <input [(ngModel)]="BookingModel.gender"  class="form-control" type="text" />
+                
+                    </div>
+                    <div>
+                        <label class="form-label">Seatnum</label>
+                        <input [(ngModel)]="BookingModel.seatnum"  class="form-control" type="text" />
+                
+                    </div>
+                    <div>
+                        <label class="form-label">Address</label>
+                        <input [(ngModel)]="BookingModel.address"  class="form-control" type="text" />
+                    </div>
+                    <div>
+                      <label class="form-label">Contact</label>
+                      <input [(ngModel)]="BookingModel.contact"  class="form-control" type="text" />
+                  </div>
+                  <div>
+                    <label class="form-label">Email</label>
+                    <input [(ngModel)]="BookingModel.email"  class="form-control" type="text" />
+                </div>
+    
+                    <div class="py-4">
+                        <input type="submit"  class="btn btn-primary" value="Booking" (click)="Addbooking()" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+    <h3>List of Bookings</h3> 
+    <table class="table caption-top">
+    <thead class="table-light">
+        <td>Airline Id</td>
+        <td>Airline Name</td>
+        <td>UserName</td>
+        <td>Gender</td>
+        <td>Seatnum</td>
+        <td>Address</td>
+        <td>Contact</td>
+        <td>Email</td>
+        
+        <td>Actions</td>
+    </thead>
+    <tr *ngFor="let cust of BookingModels">
+        <td>{{cust.airlineId}}</td>
+        <td>{{cust.airlinename}}</td>
+        <td>{{cust.username}}</td>
+        <td>{{cust.gender}}</td>
+        <td>{{cust.seatnum}}</td>
+        <td>{{cust.address}}</td>
+        <td>{{cust.contact}}</td>
+        <td>{{cust.email}}</td>
+        
+        <td>
+            <button type="button" (click)=" EditBooking(cust)" class="btn btn-outline-primary"
+                style="margin:10px">Edit</button>
+            <button type="button" (click)="DeleteBooking(cust)" class="btn btn-outline-primary">Delete</button>
+        </td>
+    </tr>
+  </table>
